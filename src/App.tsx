@@ -1,5 +1,5 @@
 import './App.css';
-import { TaskList } from './Components/TaskList/TaskList';
+import { TaskList } from './Components';
 
 export function App() {
   return <TaskList />;
