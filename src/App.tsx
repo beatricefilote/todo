@@ -1,11 +1,5 @@
-import './App.css';
+import { TaskList } from './Components';
 
-function App() {
-  return (
-    <>
-      <h1>Vite + React</h1>
-    </>
-  );
+export function App() {
+  return <TaskList />;
 }
-
-export default App;
