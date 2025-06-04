@@ -1,5 +1,6 @@
 import { Card } from '../Card';
 import { tasks } from './TaskData';
+import './TaskList.css';
 
 export const TaskList = () => {
   return (
