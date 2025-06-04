@@ -8,12 +8,7 @@ import pluginPrettier from 'eslint-plugin-prettier';
 export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
-    ignores: [
-      'node_modules/',
-      'dist/',
-      'build/',
-      '.env',
-    ],
+    ignores: ['node_modules/', 'dist/', 'build/', '.env'],
     plugins: {
       react: pluginReact,
       '@typescript-eslint': pluginTypeScript,
@@ -27,6 +22,15 @@ export default [
         ecmaFeatures: {
           jsx: true,
         },
+      },
+      globals: {
+        document: 'readonly',
+        window: 'readonly',
+      },
+    },
+    settings: {
+      react: {
+        version: 'detect',
       },
     },
     rules: {
