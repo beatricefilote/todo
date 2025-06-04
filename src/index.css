@@ -1,8 +1,0 @@
-.listTask {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem;
-  gap: 3rem;
-}
