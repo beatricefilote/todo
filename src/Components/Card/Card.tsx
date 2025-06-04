@@ -1,10 +1,15 @@
 import './Card.css';
-interface CardProps {
+
+interface Task {
   title: string;
   date: string;
 }
+interface CardProps {
+  task: Task;
+}
 
-function Card({ title, date }: CardProps) {
+export function Card({ task }: CardProps) {
+  const { date, title } = task;
   return (
     <div className="card">
       <h2>{title}</h2>
@@ -12,4 +17,3 @@ function Card({ title, date }: CardProps) {
     </div>
   );
 }
-export default Card;

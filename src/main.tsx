@@ -1,13 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import TaskList from './TaskList';
+import { App } from './App';
+import './index.css';
 
 const rootElement = document.getElementById('root');
 
 if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
-      <TaskList />
+      <App />
     </StrictMode>,
   );
 } else {

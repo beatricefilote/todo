@@ -1,6 +1,7 @@
-import Card from './Card';
+import { Card } from './Components/Card/Card';
+import './index.css';
 
-const TaskList = () => {
+export const TaskList = () => {
   const tasks = [
     { id: 1, title: 'Clean the room', date: '2023-10-01' },
     { id: 2, title: 'Do homework', date: '2023-10-02' },
@@ -13,12 +14,10 @@ const TaskList = () => {
   ];
 
   return (
-    <div>
+    <div className="list">
       {tasks.map((task) => (
-        <Card key={task.id} title={task.title} date={task.date} />
+        <Card key={task.id} task={task} />
       ))}
     </div>
   );
 };
-
-export default TaskList;
