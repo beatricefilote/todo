@@ -28,6 +28,11 @@ export default [
         window: 'readonly',
       },
     },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
     rules: {
       ...js.configs.recommended.rules,
       ...pluginReact.configs.recommended.rules,
