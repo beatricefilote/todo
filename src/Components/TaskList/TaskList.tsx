@@ -1,4 +1,4 @@
-import { Card } from '../Card/Card';
+import { Card } from '../Card';
 import { tasks } from './TaskData';
 
 export const TaskList = () => {
