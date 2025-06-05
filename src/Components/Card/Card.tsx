@@ -1,6 +1,6 @@
 import './Card.css';
 
-interface Task {
+export interface Task {
   title: string;
   date: string;
 }
