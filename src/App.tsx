@@ -1,5 +1,10 @@
-import { TaskList } from './Components';
+import { TaskList, Input } from './Components';
 
 export function App() {
-  return <TaskList />;
+  return (
+    <>
+      <Input />
+      <TaskList />
+    </>
+  );
 }
