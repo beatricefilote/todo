@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Input.css';
-import type { Task } from '../Card';
+import type { Task } from '../../Card';
 import { TaskList, mockedTasks } from '../TaskList';
 
 export function InputTask() {

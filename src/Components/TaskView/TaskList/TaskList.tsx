@@ -1,6 +1,6 @@
-import { Card } from '../Card';
+import { Card } from '../../Card';
 import './TaskList.css';
-import { type Task } from '../Card';
+import { type Task } from '../../Card';
 
 export interface TaskListItem {
   tasks: Task[];
