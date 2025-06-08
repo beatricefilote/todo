@@ -3,8 +3,9 @@ import './Card.css';
 export interface Task {
   title: string;
   date: string;
+  id: number;
 }
-interface CardProps {
+export interface CardProps {
   task: Task;
 }
 

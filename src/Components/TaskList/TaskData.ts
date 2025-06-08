@@ -1,4 +1,4 @@
-export const tasks = [
+export const mockedTasks = [
   { id: 1, title: 'Clean the room', date: '2023-10-01' },
   { id: 2, title: 'Do homework', date: '2023-10-02' },
   { id: 3, title: 'Walk the dog', date: '2023-10-03' },

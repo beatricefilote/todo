@@ -1,8 +1,12 @@
 import { Card } from '../Card';
-import { tasks } from './TaskData';
 import './TaskList.css';
+import { type Task } from '../Card';
 
-export const TaskList = () => {
+export interface TaskListProps {
+  tasks: Task[];
+}
+
+export function TaskList({ tasks }: TaskListProps) {
   return (
     <div className="listTask">
       {tasks.map((task) => (
@@ -10,4 +14,4 @@ export const TaskList = () => {
       ))}
     </div>
   );
-};
+}

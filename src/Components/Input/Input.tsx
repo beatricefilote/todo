@@ -1,30 +1,38 @@
 import { useState } from 'react';
 import './Input.css';
+import type { Task } from '../Card';
+import { TaskList, mockedTasks } from '../TaskList';
 
 export function Input() {
-  const [newTask, setNewTask] = useState('');
-  const [tasks, setTasks] = useState(); //aici vreau sa mi pun arrayu meu cu taskuri
+  const [newTitle, setNewTitle] = useState('');
+  const [tasks, setTasks] = useState<Task[]>(mockedTasks);
 
-  function addTask() {
-    setTasks();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function handleInputChange(event: any) {
+    setNewTitle(event.target.value);
   }
-
-  function handleInputChange(event) {
-    setNewTask(event.target.value);
+  function addTask() {
+    const newTask: Task = {
+      title: newTitle,
+      date: new Date().toString(),
+      id: Math.random(),
+    };
+    setTasks((t) => [...t, newTask]);
+    setNewTitle('');
   }
   return (
     <div className="input">
-      {newTask}
       <input
         className="input-add"
         type="text"
         placeholder="Introdu un nou task"
-        value={newTask}
+        value={newTitle}
         onChange={handleInputChange}
       ></input>
       <button className="button-add" onClick={addTask}>
         Add Task
       </button>
+      <TaskList tasks={tasks} />
     </div>
   );
 }
