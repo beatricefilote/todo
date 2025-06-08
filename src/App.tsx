@@ -1,9 +1,9 @@
-import { InputTask } from './Components';
+import { TaskView } from './Components';
 
 export function App() {
   return (
     <>
-      <InputTask />
+      <TaskView />
     </>
   );
 }
