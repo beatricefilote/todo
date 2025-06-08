@@ -3,7 +3,7 @@ import './Input.css';
 import type { Task } from '../Card';
 import { TaskList, mockedTasks } from '../TaskList';
 
-export function Input() {
+export function InputTask() {
   const [newTitle, setNewTitle] = useState('');
   const [tasks, setTasks] = useState<Task[]>(mockedTasks);
 

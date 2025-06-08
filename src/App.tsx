@@ -1,9 +1,9 @@
-import { Input } from './Components';
+import { InputTask } from './Components';
 
 export function App() {
   return (
     <>
-      <Input />
+      <InputTask />
     </>
   );
 }
