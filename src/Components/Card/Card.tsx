@@ -5,11 +5,11 @@ export interface Task {
   date: string;
   id: number;
 }
-export interface CardProps {
+export interface CardItem {
   task: Task;
 }
 
-export function Card({ task }: CardProps) {
+export function Card({ task }: CardItem) {
   const { date, title } = task;
   return (
     <div className="card">

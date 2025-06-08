@@ -2,13 +2,13 @@ import { Card } from '../Card';
 import './TaskList.css';
 import { type Task } from '../Card';
 
-export interface TaskListProps {
+export interface TaskListItem {
   tasks: Task[];
 }
 
-export function TaskList({ tasks }: TaskListProps) {
+export function TaskList({ tasks }: TaskListItem) {
   return (
-    <div className="listTask">
+    <div className="listOfTasks">
       {tasks.map((task) => (
         <Card key={task.id} task={task} />
       ))}
