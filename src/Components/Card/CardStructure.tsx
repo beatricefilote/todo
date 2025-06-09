@@ -1,4 +1,4 @@
-import './CardFormat.css';
+import './CardStructure.css';
 import type { TaskProps } from '../../Types';
 
 export interface TaskCardProps {

@@ -1,1 +1,1 @@
-export * from './CardFormat';
+export * from './CardStructure';
