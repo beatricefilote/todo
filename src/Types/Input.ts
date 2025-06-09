@@ -1,3 +1,3 @@
-export interface InputFormatProps {
+export interface InputProps {
   addNewItem: (title: string) => void;
 }

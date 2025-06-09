@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { TaskProps } from '../../Types';
 import { TaskList, mockedTasks } from './TaskList';
-import { InputTask } from './AddTask';
+import { AddTask } from './AddTask';
 
 export function TaskView() {
   const [tasks, setTasks] = useState<TaskProps[]>(mockedTasks);
@@ -17,7 +17,7 @@ export function TaskView() {
 
   return (
     <div className="task-view">
-      <InputTask addNewItem={addTask} />
+      <AddTask addNewItem={addTask} />
       <TaskList tasks={tasks} />
     </div>
   );

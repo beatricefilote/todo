@@ -1,16 +1,16 @@
-import { CardStructure } from '../../CardStructure';
+import { TaskCard } from '../../TaskCard';
 import './TaskList.css';
 import { type TaskProps } from '../../../Types';
 
-export interface TaskOfListProps {
+export interface TaskListProps {
   tasks: TaskProps[];
 }
 
-export function TaskList({ tasks }: TaskOfListProps) {
+export function TaskList({ tasks }: TaskListProps) {
   return (
     <div className="listOfTasks">
       {tasks.map((task) => (
-        <CardStructure key={task.id} task={task} />
+        <TaskCard key={task.id} task={task} />
       ))}
     </div>
   );
