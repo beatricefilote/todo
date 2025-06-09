@@ -1,30 +1,34 @@
 import { useState } from 'react';
 import './AddTask.css';
-import { type Input } from '../../Types';
 
-export function AddTask({ addNewItem }: Input) {
+export interface Input {
+  addNewItem: (title: string) => void;
+}
+
+export const AddTask = ({ addNewItem }: Input) => {
   const [newTitle, setNewTitle] = useState('');
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function handleInputChange(event: any) {
+  const handleInputChange = (event: any) => {
     setNewTitle(event.target.value);
-  }
-  function addTask() {
+  };
+  const addTask = () => {
     addNewItem(newTitle);
     setNewTitle('');
-  }
+  };
   return (
     <div className="input">
       <input
-        className="input-add"
         type="text"
-        placeholder="Introdu un nou task"
         value={newTitle}
+        className="input-add"
         onChange={handleInputChange}
-      ></input>
+        placeholder="Introdu un nou task"
+      />
+
       <button className="button-add" onClick={addTask}>
         Add Task
       </button>
     </div>
   );
-}
+};

@@ -1,9 +1,9 @@
 import { TaskView } from './Views';
 
-export function App() {
+export const App = () => {
   return (
     <>
       <TaskView />
     </>
   );
-}
+};

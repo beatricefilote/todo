@@ -6,7 +6,7 @@ export interface TaskListProps {
   tasks: Task[];
 }
 
-export function TaskList({ tasks }: TaskListProps) {
+export const TaskList = ({ tasks }: TaskListProps) => {
   return (
     <div className="listOfTasks">
       {tasks.map((task) => (
@@ -14,4 +14,4 @@ export function TaskList({ tasks }: TaskListProps) {
       ))}
     </div>
   );
-}
+};

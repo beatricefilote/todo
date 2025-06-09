@@ -3,17 +3,17 @@ import type { Task } from '../../Types';
 import { TaskList, mockedTasks } from '../../Components';
 import { AddTask } from '../../Components';
 
-export function TaskView() {
+export const TaskView = () => {
   const [tasks, setTasks] = useState<Task[]>(mockedTasks);
 
-  function addTask(title: string) {
+  const addTask = (title: string) => {
     const newTask: Task = {
       title,
       date: new Date().toString(),
       id: Math.random(),
     };
     setTasks((t) => [...t, newTask]);
-  }
+  };
 
   return (
     <div className="task-view">
@@ -21,4 +21,4 @@ export function TaskView() {
       <TaskList tasks={tasks} />
     </div>
   );
-}
+};
