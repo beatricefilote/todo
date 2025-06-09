@@ -1,0 +1,33 @@
+.input-add {
+  width: 10rem;
+  height: 2rem;
+  text-align: center;
+
+}
+
+.button-add {
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: #3cb371;
+  transition-duration: 0.4s;
+  border: none;
+  border-radius: 2rem;
+
+}
+
+.button-add:hover {
+  color: white;
+}
+
+.button-add:active {
+  background-color: rgba(29, 145, 247, 0.817);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1rem;
+}

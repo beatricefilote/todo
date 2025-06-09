@@ -1,12 +1,16 @@
-import { Card } from '../Card';
-import { tasks } from './TaskData';
+import { TaskCard } from '../TaskCard';
 import './TaskList.css';
+import { type Task } from '../../Types';
 
-export const TaskList = () => {
+export interface TaskListProps {
+  tasks: Task[];
+}
+
+export const TaskList = ({ tasks }: TaskListProps) => {
   return (
-    <div className="listTask">
+    <div className="listOfTasks">
       {tasks.map((task) => (
-        <Card key={task.id} task={task} />
+        <TaskCard key={task.id} task={task} />
       ))}
     </div>
   );

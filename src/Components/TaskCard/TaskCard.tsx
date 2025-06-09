@@ -1,14 +1,11 @@
-import './Card.css';
+import './TaskCard.css';
+import type { Task } from '../../Types';
 
-interface Task {
-  title: string;
-  date: string;
-}
-interface CardProps {
+export interface TaskCardProps {
   task: Task;
 }
 
-export function Card({ task }: CardProps) {
+export const TaskCard = ({ task }: TaskCardProps) => {
   const { date, title } = task;
   return (
     <div className="card">
@@ -16,4 +13,4 @@ export function Card({ task }: CardProps) {
       <p>Data la care a fost adaugat taskul este : {date}</p>
     </div>
   );
-}
+};

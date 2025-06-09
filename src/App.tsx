@@ -1,5 +1,9 @@
-import { TaskList } from './Components';
+import { TaskView } from './Views';
 
-export function App() {
-  return <TaskList />;
-}
+export const App = () => {
+  return (
+    <>
+      <TaskView />
+    </>
+  );
+};
