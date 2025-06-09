@@ -1,11 +1,11 @@
-import './Card.css';
+import './CardFormat.css';
 import type { TaskProps } from '../../Types';
 
-export interface CardItemProps {
+export interface TaskCardProps {
   task: TaskProps;
 }
 
-export function Card({ task }: CardItemProps) {
+export function Card({ task }: TaskCardProps) {
   const { date, title } = task;
   return (
     <div className="card">
