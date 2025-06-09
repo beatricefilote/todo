@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Input.css';
+import './AddTask.css';
 import { type InputFormatProps } from '../../../Types';
 
 export function InputTask({ addNewItem }: InputFormatProps) {
