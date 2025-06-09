@@ -5,7 +5,7 @@ export interface TaskCardProps {
   task: TaskProps;
 }
 
-export function Card({ task }: TaskCardProps) {
+export function CardStructure({ task }: TaskCardProps) {
   const { date, title } = task;
   return (
     <div className="card">
