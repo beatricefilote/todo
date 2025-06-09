@@ -1,23 +1,18 @@
 import { useState } from 'react';
 import './Input.css';
-import type { Task } from '../../Card';
-import { TaskList, mockedTasks } from '../TaskList';
 
-export function InputTask() {
+export interface InputFormat {
+  addNewItem: (title: string) => void;
+}
+export function InputTask({ addNewItem }: InputFormat) {
   const [newTitle, setNewTitle] = useState('');
-  const [tasks, setTasks] = useState<Task[]>(mockedTasks);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function handleInputChange(event: any) {
     setNewTitle(event.target.value);
   }
   function addTask() {
-    const newTask: Task = {
-      title: newTitle,
-      date: new Date().toString(),
-      id: Math.random(),
-    };
-    setTasks((t) => [...t, newTask]);
+    addNewItem(newTitle);
     setNewTitle('');
   }
   return (
@@ -32,7 +27,6 @@ export function InputTask() {
       <button className="button-add" onClick={addTask}>
         Add Task
       </button>
-      <TaskList tasks={tasks} />
     </div>
   );
 }
