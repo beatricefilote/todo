@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import './Input.css';
+import { type InputFormatProps } from '../../../Types';
 
-export interface InputFormat {
-  addNewItem: (title: string) => void;
-}
-export function InputTask({ addNewItem }: InputFormat) {
+export function InputTask({ addNewItem }: InputFormatProps) {
   const [newTitle, setNewTitle] = useState('');
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
