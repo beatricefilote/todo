@@ -1,4 +1,4 @@
-import { Card } from '../../CardStructure';
+import { CardStructure } from '../../CardStructure';
 import './TaskList.css';
 import { type TaskProps } from '../../../Types';
 
@@ -10,7 +10,7 @@ export function TaskList({ tasks }: TaskOfListProps) {
   return (
     <div className="listOfTasks">
       {tasks.map((task) => (
-        <Card key={task.id} task={task} />
+        <CardStructure key={task.id} task={task} />
       ))}
     </div>
   );
