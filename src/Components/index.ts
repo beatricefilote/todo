@@ -1,2 +1,3 @@
 export * from './TaskCard';
-export * from './TaskView';
+export * from './TaskList';
+export * from './AddTask';

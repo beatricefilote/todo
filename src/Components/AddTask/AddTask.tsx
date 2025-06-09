@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './AddTask.css';
-import { type InputProps } from '../../../Types';
+import { type Input } from '../../Types';
 
-export function AddTask({ addNewItem }: InputProps) {
+export function AddTask({ addNewItem }: Input) {
   const [newTitle, setNewTitle] = useState('');
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

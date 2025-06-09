@@ -1,9 +1,9 @@
-import { TaskCard } from '../../TaskCard';
+import { TaskCard } from '../TaskCard';
 import './TaskList.css';
-import { type TaskProps } from '../../../Types';
+import { type Task } from '../../Types';
 
 export interface TaskListProps {
-  tasks: TaskProps[];
+  tasks: Task[];
 }
 
 export function TaskList({ tasks }: TaskListProps) {

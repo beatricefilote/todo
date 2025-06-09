@@ -1,4 +1,4 @@
-import { TaskView } from './Components';
+import { TaskView } from './Views';
 
 export function App() {
   return (

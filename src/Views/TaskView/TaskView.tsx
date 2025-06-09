@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import type { TaskProps } from '../../Types';
-import { TaskList, mockedTasks } from './TaskList';
-import { AddTask } from './AddTask';
+import type { Task } from '../../Types';
+import { TaskList, mockedTasks } from '../../Components';
+import { AddTask } from '../../Components';
 
 export function TaskView() {
-  const [tasks, setTasks] = useState<TaskProps[]>(mockedTasks);
+  const [tasks, setTasks] = useState<Task[]>(mockedTasks);
 
   function addTask(title: string) {
-    const newTask: TaskProps = {
+    const newTask: Task = {
       title,
       date: new Date().toString(),
       id: Math.random(),

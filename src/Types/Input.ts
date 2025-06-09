@@ -1,3 +1,3 @@
-export interface InputProps {
+export interface Input {
   addNewItem: (title: string) => void;
 }
