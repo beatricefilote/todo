@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './AddTask.css';
 
-export interface Input {
+export interface AddTaskProps {
   addNewItem: (title: string) => void;
 }
 
-export const AddTask = ({ addNewItem }: Input) => {
+export const AddTask = ({ addNewItem }: AddTaskProps) => {
   const [newTitle, setNewTitle] = useState('');
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

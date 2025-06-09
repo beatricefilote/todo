@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import type { Task } from '../../Types';
-import { TaskList, mockedTasks } from '../../Components';
-import { AddTask } from '../../Components';
+import { TaskList, mockedTasks, AddTask } from '../../Components';
 
 export const TaskView = () => {
   const [tasks, setTasks] = useState<Task[]>(mockedTasks);
