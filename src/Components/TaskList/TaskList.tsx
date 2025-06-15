@@ -1,7 +1,7 @@
 import { TaskCard } from '../TaskCard';
 import './TaskList.css';
 import { type Task } from '../../Types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export interface TaskListProps {
   tasks: Task[];
@@ -9,9 +9,12 @@ export interface TaskListProps {
 
 export const TaskList = ({ tasks }: TaskListProps) => {
   const [newTasksList, setNewTasksList] = useState(tasks);
+  useEffect(() => {
+    setNewTasksList(tasks);
+  }, [tasks]);
 
   const handleDeleteTask = (id: number) => {
-    setNewTasksList((tasks) => tasks.filter((task) => task.id != id));
+    setNewTasksList((prevTasks) => prevTasks.filter((task) => task.id != id));
   };
   return (
     <div className="listOfTasks">

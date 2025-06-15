@@ -1,11 +1,28 @@
 import './TaskCard.css';
 import type { Task } from '../../Types';
-import { DeleteTask } from '../DeleteTask';
+import './DeleteTask.css';
 
 export interface TaskCardProps {
   task: Task;
   deletedTask: (id: number) => void;
 }
+interface DeleteTaskProps {
+  taskId: number;
+  deleteTask: (id: number) => void;
+}
+export const DeleteTask = ({ taskId, deleteTask }: DeleteTaskProps) => {
+  const deletedTask = () => {
+    deleteTask(taskId);
+  };
+
+  return (
+    <div className="delete-task">
+      <button className="button-delete" onClick={deletedTask}>
+        Delete Task
+      </button>
+    </div>
+  );
+};
 
 export const TaskCard = ({ task, deletedTask }: TaskCardProps) => {
   const { id, date, title } = task;
