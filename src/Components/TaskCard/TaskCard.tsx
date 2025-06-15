@@ -1,17 +1,16 @@
 import './TaskCard.css';
 import type { Task } from '../../Types';
-import './DeleteTask.css';
 
 export interface TaskCardProps {
   task: Task;
   deleteTask: (id: number) => void;
 }
 interface DeleteTaskProps {
-  handleDelete: () => void;
+  deleteTask: () => void;
 }
-const DeleteTask = ({ handleDelete }: DeleteTaskProps) => {
+const DeleteTask = ({ deleteTask }: DeleteTaskProps) => {
   return (
-    <button className="button-delete" onClick={handleDelete}>
+    <button className="button-delete" onClick={deleteTask}>
       Delete
     </button>
   );
@@ -26,7 +25,7 @@ export const TaskCard = ({ task, deleteTask }: TaskCardProps) => {
     <div className="card">
       <h2>{title}</h2>
       <p>Data la care a fost adaugat taskul este : {date}</p>
-      <DeleteTask handleDelete={handleDelete} />
+      <DeleteTask deleteTask={handleDelete} />
     </div>
   );
 };

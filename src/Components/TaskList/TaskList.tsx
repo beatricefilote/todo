@@ -4,14 +4,14 @@ import { type Task } from '../../Types';
 
 export interface TaskListProps {
   tasks: Task[];
-  delete_task: (id: number) => void;
+  deleteTask: (id: number) => void;
 }
 
-export const TaskList = ({ tasks, delete_task }: TaskListProps) => {
+export const TaskList = ({ tasks, deleteTask }: TaskListProps) => {
   return (
     <div className="listOfTasks">
       {tasks.map((task) => (
-        <TaskCard key={task.id} task={task} deleteTask={delete_task} />
+        <TaskCard key={task.id} task={task} deleteTask={deleteTask} />
       ))}
     </div>
   );
