@@ -20,7 +20,7 @@ export const TaskView = () => {
   return (
     <div className="task-view">
       <AddTask addNewItem={addTask} />
-      <TaskList tasks={tasks} deleteBtn={handleDeleteTask} />
+      <TaskList tasks={tasks} delete_task={handleDeleteTask} />
     </div>
   );
 };
