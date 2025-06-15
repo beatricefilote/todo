@@ -1,11 +1,31 @@
 .card {
   width: 14rem;
   height: 14rem;
-  background-color: #3cb371;
+  background-color: #b6c9d2;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+.button-delete {
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: #e7738a;
+  transition-duration: 0.4s;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: rgb(52, 50, 50)
+}
+
+.button-delete:hover {
+  color: white;
+}
+
+.button-delete:active {
+  background-color: rgba(29, 145, 247, 0.817);
 }
