@@ -4,7 +4,7 @@ import './DeleteTask.css';
 
 export interface TaskCardProps {
   task: Task;
-  deletedTask: (id: number) => void;
+  deleteBtn: (id: number) => void;
 }
 interface DeleteTaskProps {
   handleDelete: () => void;
@@ -17,10 +17,10 @@ const DeleteTask = ({ handleDelete }: DeleteTaskProps) => {
   );
 };
 
-export const TaskCard = ({ task, deletedTask }: TaskCardProps) => {
+export const TaskCard = ({ task, deleteBtn }: TaskCardProps) => {
   const { id, date, title } = task;
   const handleDelete = () => {
-    deletedTask(id);
+    deleteBtn(id);
   };
   return (
     <div className="card">

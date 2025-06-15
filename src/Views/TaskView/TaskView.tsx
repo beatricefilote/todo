@@ -13,11 +13,14 @@ export const TaskView = () => {
     };
     setTasks((t) => [...t, newTask]);
   };
+  const handleDeleteTask = (id: number) => {
+    setTasks((prevTasks) => prevTasks.filter((task) => task.id != id));
+  };
 
   return (
     <div className="task-view">
       <AddTask addNewItem={addTask} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} deleteBtn={handleDeleteTask} />
     </div>
   );
 };
