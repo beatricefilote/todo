@@ -1,12 +1,13 @@
 import './DeleteTask.css';
 
 export interface DeleteTaskProps {
-  deleteTask: () => void;
+  taskId: number;
+  deleteTask: (id: number) => void;
 }
 
-export const DeleteTask = ({ deleteTask }: DeleteTaskProps) => {
+export const DeleteTask = ({ taskId, deleteTask }: DeleteTaskProps) => {
   const deletedTask = () => {
-    deleteTask();
+    deleteTask(taskId);
   };
 
   return (
