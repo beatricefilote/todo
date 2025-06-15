@@ -7,30 +7,26 @@ export interface TaskCardProps {
   deletedTask: (id: number) => void;
 }
 interface DeleteTaskProps {
-  taskId: number;
-  deleteTask: (id: number) => void;
+  handleDelete: () => void;
 }
-export const DeleteTask = ({ taskId, deleteTask }: DeleteTaskProps) => {
-  const deletedTask = () => {
-    deleteTask(taskId);
-  };
-
+const DeleteTask = ({ handleDelete }: DeleteTaskProps) => {
   return (
-    <div className="delete-task">
-      <button className="button-delete" onClick={deletedTask}>
-        Delete Task
-      </button>
-    </div>
+    <button className="button-delete" onClick={handleDelete}>
+      Delete
+    </button>
   );
 };
 
 export const TaskCard = ({ task, deletedTask }: TaskCardProps) => {
   const { id, date, title } = task;
+  const handleDelete = () => {
+    deletedTask(id);
+  };
   return (
     <div className="card">
       <h2>{title}</h2>
       <p>Data la care a fost adaugat taskul este : {date}</p>
-      <DeleteTask taskId={id} deleteTask={deletedTask} />
+      <DeleteTask handleDelete={handleDelete} />
     </div>
   );
 };
